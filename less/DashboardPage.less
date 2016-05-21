@@ -1,0 +1,131 @@
+.DashboardPage {
+
+  .container {
+    max-width: 100%;
+  }
+
+  .DashboardGraph {
+    background: white;
+    padding: 10px 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+
+    .DashboardGraph--Category {
+      color: #9CADBC;
+      text-transform: uppercase;
+      width: 30%;
+      display: inline-block;
+      text-align: center;
+
+      .color {
+        content: " ";
+        display: inline-block;
+        width: 11px;
+        height: 11px;
+        border-radius: 3px;
+        margin-right: 4px;
+      }
+
+      .number {
+        width: 100%;
+        font-size: 1.8em;
+        color: #484848;
+      }
+
+      &.Category--Users .color {
+        background-color: #00b3ee;
+      }
+
+      &.Category--Discussions .color {
+        background-color: orange;
+      }
+
+      &.Category--Posts .color {
+        background-color: yellow;
+      }
+    }
+
+    .DashboardGraph--Graph {
+
+      .DashboardGraph--Month {
+        width: 8%;
+        display: inline-block;
+        text-align: center;
+
+        .bar {
+          margin-bottom: 10px;
+        }
+        .name {
+          color: #ACBAC7;
+          text-transform: capitalize;
+        }
+      }
+
+    }
+
+  }
+
+  .DashboardPage--Versions {
+    background: white;
+    padding: 1px 1.25px;
+    width: 100%;
+    border-radius: 5px;
+
+    ul {
+      list-style-type: none;
+
+      li {
+        display: inline;
+        margin-right: 20px;
+      }
+    }
+
+    .DashboardPage--Versions.Error {
+      background-color: red;
+      padding: 0.75% 1%;
+      overflow: hidden;
+      //width: calc(100% - 20px);
+      color: white;
+      height: auto;
+      -webkit-transition: all 0.5s ease-in-out;
+      -moz-transition: all 0.5s ease-in-out;
+      -ms-transition: all 0.5s ease-in-out;
+      -o-transition: all 0.5s ease-in-out;
+      transition: all 0.5s ease-in-out;
+
+      &.hidden {
+        height: 0;
+        padding: 0;
+      }
+    }
+
+
+
+    .DashboardPage--ExtensionUpdates {
+
+      button {
+        width: inherit;
+        -webkit-transition: width 0.5s ease-in-out;
+        -moz-transition: width 0.5s ease-in-out;
+        -ms-transition: width 0.5s ease-in-out;
+        -o-transition: width 0.5s ease-in-out;
+        transition: width 0.5s ease-in-out;
+
+        padding: 7px 10px;
+
+        &.hidden {
+          //width: 0px !important;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 1006px) {
+
+  .DashboardPage .container {
+    padding-top: 20px;
+  }
+
+}
